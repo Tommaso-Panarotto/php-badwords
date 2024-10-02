@@ -21,8 +21,10 @@
                         <input type="text" class="form-control" id="user-text" name="UserText" placeholder="Give papa a cup of proper coffe in a copper coffe cup">
                         <div id="emailHelp" class="form-text">We'll never share your text with anyone else.</div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-primary btn-warning">reset</button>
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-primary btn-warning">Reset</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -30,3 +32,17 @@
 </body>
 
 </html>
+
+<style>
+    h1,
+    .button {
+        text-align: center;
+    }
+
+    .col {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+</style>

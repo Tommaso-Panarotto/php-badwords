@@ -20,19 +20,20 @@ $censored = str_ireplace(" ", "***", $text);
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>BadWords</h1>
-                <ul>
+                <h1 class="text-center">BadWords</h1>
+                <ul class="mt-5 d-flex justify-content-between">
                     <li>
                         <h3>Testo per intero</h3>
                         <ul>
                             <li class="d-flex gap-4 align-items-center">
-                                <h4>testo:</h4><?php echo $text; ?>
+                                <h4>testo:</h4>
+                                <div class="php"><?php echo $text; ?></div>
                             </li>
                             <li class="d-flex gap-4 align-items-center">
                                 <h4>lunghezza testo:</h4>
-                                <?php
-                                $string = str_ireplace(" ", "", $text);
-                                echo strlen($string); ?>
+                                <div class="php"><?php
+                                                    $string = str_ireplace(" ", "", $text);
+                                                    echo strlen($string); ?></div>
                             </li>
                         </ul>
                     </li>
@@ -40,10 +41,12 @@ $censored = str_ireplace(" ", "***", $text);
                         <h3>Testo censurato</h3>
                         <ul>
                             <li class="d-flex gap-4 align-items-center">
-                                <h4>testo:</h4><?php echo $censored; ?>
+                                <h4>testo:</h4>
+                                <div class="php"><?php echo $censored; ?></div>
                             </li>
                             <li class="d-flex gap-4 align-items-center">
-                                <h4>lunghezza testo:</h4><?php echo strlen($censored); ?>
+                                <h4>lunghezza testo:</h4>
+                                <div class="php"><?php echo strlen($censored); ?></div>
                             </li>
                         </ul>
                     </li>
@@ -54,3 +57,14 @@ $censored = str_ireplace(" ", "***", $text);
 </body>
 
 </html>
+
+<style>
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin-top: 20px;
+        max-width: 50%;
+    }
+</style>
