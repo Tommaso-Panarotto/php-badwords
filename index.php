@@ -22,6 +22,7 @@
                         <div id="emailHelp" class="form-text">We'll never share your text with anyone else.</div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-primary btn-warning">reset</button>
                 </form>
             </div>
         </div>
