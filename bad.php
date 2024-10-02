@@ -1,6 +1,8 @@
 <?php
 //GET text from form
 $text = $_GET["UserText"];
+
+$censored = str_ireplace(" ", "***", $text);
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -19,7 +21,33 @@ $text = $_GET["UserText"];
         <div class="row">
             <div class="col">
                 <h1>BadWords</h1>
-
+                <ul>
+                    <li>
+                        <h3>Testo per intero</h3>
+                        <ul>
+                            <li class="d-flex gap-4 align-items-center">
+                                <h4>testo:</h4><?php echo $text; ?>
+                            </li>
+                            <li class="d-flex gap-4 align-items-center">
+                                <h4>lunghezza testo:</h4>
+                                <?php
+                                $string = str_ireplace(" ", "", $text);
+                                echo strlen($string); ?>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Testo censurato</h3>
+                        <ul>
+                            <li class="d-flex gap-4 align-items-center">
+                                <h4>testo:</h4><?php echo $censored; ?>
+                            </li>
+                            <li class="d-flex gap-4 align-items-center">
+                                <h4>lunghezza testo:</h4><?php echo strlen($censored); ?>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
