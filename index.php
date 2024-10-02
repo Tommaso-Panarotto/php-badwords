@@ -19,7 +19,10 @@
                     <div class="mb-3">
                         <label for="UserText" class="form-label">Type a text</label>
                         <input type="text" class="form-control" id="user-text" name="UserText" placeholder="Give papa a cup of proper coffe in a copper coffe cup">
-                        <div id="emailHelp" class="form-text">We'll never share your text with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="UserWord" class="form-label">Type a word to censored</label>
+                        <input type="text" class="form-control" id="user-word" name="UserWord" placeholder="cup">
                     </div>
                     <div class="button">
                         <button type="submit" class="btn btn-primary">Submit</button>

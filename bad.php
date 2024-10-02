@@ -2,7 +2,9 @@
 //GET text from form
 $text = $_GET["UserText"];
 
-$censored = str_ireplace(" ", "***", $text);
+$word = $_GET["UserWord"];
+
+$censored = str_ireplace($word, "***", $text);
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -31,9 +33,7 @@ $censored = str_ireplace(" ", "***", $text);
                             </li>
                             <li class="d-flex gap-4 align-items-center">
                                 <h4>lunghezza testo:</h4>
-                                <div class="php"><?php
-                                                    $string = str_ireplace(" ", "", $text);
-                                                    echo strlen($string); ?></div>
+                                <div class="php"><?php echo strlen($text); ?></div>
                             </li>
                         </ul>
                     </li>
@@ -65,6 +65,9 @@ $censored = str_ireplace(" ", "***", $text);
 
     li {
         margin-top: 20px;
-        max-width: 50%;
+    }
+
+    .php {
+        width: 50%;
     }
 </style>
